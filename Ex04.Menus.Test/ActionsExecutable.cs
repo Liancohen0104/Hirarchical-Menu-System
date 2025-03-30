@@ -1,7 +1,6 @@
 ﻿using System;
 namespace Ex04.Menus.Test
 {
-    // $G$ DSN-999 (-5) Bad encapsulation. These methods should have been internal.
     public class ActionsExecutable
     {
         public static void showVersion()

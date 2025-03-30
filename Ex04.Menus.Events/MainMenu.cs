@@ -51,7 +51,6 @@ namespace Ex04.Menus.Events
             Console.WriteLine("-------------------------");
         }
 
-        // $G$ DSN-001 (-3) The main menu should not be responsible for managing the sub menu input / output.
         private void printMenuItems(List<MenuItem> i_MenuItems, bool i_IsMainMenu = true)
         {
             for (int i = 0; i < i_MenuItems.Count; ++i)

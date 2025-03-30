@@ -19,7 +19,6 @@ namespace Ex04.Menus.Events
             }
         }
 
-        // $G$ DSN-999 (-3) This method should have been internal.
         public override void Select()
         {
             bool backRequested = false;
