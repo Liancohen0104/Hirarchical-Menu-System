@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-namespace Ex04.Menus.Interfaces
+
+namespace Menus.Events
 {
     public class SubMenuItem : MenuItem
     {
@@ -15,7 +16,7 @@ namespace Ex04.Menus.Interfaces
         {
             get
             {
-                return this.r_SubMenuItemsList;
+                return r_SubMenuItemsList;
             }
         }
 
@@ -28,21 +29,21 @@ namespace Ex04.Menus.Interfaces
             {
                 Console.WriteLine($"** {Title} **");
                 Console.WriteLine("-------------------------");
-                for(int i = 0; i < r_SubMenuItemsList.Count; ++i)
+                for (int i = 0; i < r_SubMenuItemsList.Count; ++i)
                 {
                     Console.WriteLine($"{i + 1}. {r_SubMenuItemsList[i].Title}");
                 }
 
                 Console.WriteLine("0. Back");
-                userChoice = MainMenu.GetValidChoiceFromUser(r_SubMenuItemsList.Count);
-                if(userChoice == 0)
+                userChoice = getValidChoiceFromUser(r_SubMenuItemsList.Count);
+                if (userChoice == 0)
                 {
                     backRequested = true;
                     Console.Clear();
                 }
                 else
                 {
-                    if(r_SubMenuItemsList[userChoice - 1] is SubMenuItem)
+                    if (r_SubMenuItemsList[userChoice - 1] is SubMenuItem)
                     {
                         Console.Clear();
                     }
@@ -50,6 +51,29 @@ namespace Ex04.Menus.Interfaces
                     r_SubMenuItemsList[userChoice - 1].Select();
                 }
             }
+        }
+
+        private int getValidChoiceFromUser(int i_MaxIndexMenuItem)
+        {
+            int userChoice;
+            bool validInput = false;
+            string input;
+
+            do
+            {
+                Console.Write(">> ");
+                input = Console.ReadLine();
+                validInput = int.TryParse(input, out userChoice)
+                             && userChoice >= 0
+                             && userChoice <= i_MaxIndexMenuItem;
+                if (!validInput)
+                {
+                    Console.WriteLine("Invalid input, please try again");
+                }
+            }
+            while (!validInput);
+
+            return userChoice;
         }
     }
 }

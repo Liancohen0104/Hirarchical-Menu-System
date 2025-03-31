@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ex04.Menus.Events
+namespace Menus.Events
 {
     public class OperationMenuItem : MenuItem
     {

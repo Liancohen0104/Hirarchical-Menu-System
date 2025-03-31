@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-namespace Ex04.Menus.Interfaces
+
+namespace Menus.Interfaces
 {
     public class MainMenu
     {
@@ -17,14 +18,14 @@ namespace Ex04.Menus.Interfaces
         {
             get
             {
-                return this.r_MenuItems;
+                return r_MenuItems;
             }
         }
 
         public void Show()
         {
             bool userChoseExit = false;
-            int  userChoice;
+            int userChoice;
 
             while (!userChoseExit)
             {

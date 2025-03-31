@@ -1,4 +1,4 @@
-﻿namespace Ex04.Menus.Interfaces
+﻿namespace Menus.Interfaces
 {
     public interface ISelectedMenuItemListener
     {

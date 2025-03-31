@@ -1,5 +1,6 @@
-﻿using Ex04.Menus.Events;
-namespace Ex04.Menus.Test
+﻿using Menus.Events;
+
+namespace Menus.Test
 {
     public class DelegateMenu
     {

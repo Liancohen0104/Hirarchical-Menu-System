@@ -47,13 +47,13 @@
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ex04.Menus.Events\Ex04.Menus.Events.csproj">
+    <ProjectReference Include="..\Menus.Events\Menus.Events.csproj">
       <Project>{52a7050f-c3a8-4f2c-b38e-ff68e7fb868e}</Project>
-      <Name>Ex04.Menus.Events</Name>
+      <Name>Menus.Events</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Ex04.Menus.Interfaces\Ex04.Menus.Interfaces.csproj">
+    <ProjectReference Include="..\Menus.Interfaces\Menus.Interfaces.csproj">
       <Project>{5e3794dd-ae48-459f-9ac8-d365d315b9f3}</Project>
-      <Name>Ex04.Menus.Interfaces</Name>
+      <Name>Menus.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

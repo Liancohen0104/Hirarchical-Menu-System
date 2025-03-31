@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
-namespace Ex04.Menus.Interfaces
+
+namespace Menus.Interfaces
 {
     public class OperationMenuItem : MenuItem
     {
         private readonly int r_MenuItemId;
         private readonly List<ISelectedMenuItemListener> r_SelectedMenuItemListeners;
-        
+
         public OperationMenuItem(int i_MenuItemId, string i_Title) : base(i_Title)
         {
             r_MenuItemId = i_MenuItemId;

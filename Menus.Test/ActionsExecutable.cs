@@ -1,5 +1,6 @@
 ﻿using System;
-namespace Ex04.Menus.Test
+
+namespace Menus.Test
 {
     public class ActionsExecutable
     {

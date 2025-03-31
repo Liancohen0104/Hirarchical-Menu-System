@@ -1,5 +1,6 @@
-﻿using Ex04.Menus.Interfaces;
-namespace Ex04.Menus.Test
+﻿using Menus.Interfaces;
+
+namespace Menus.Test
 {
     public class InterfaceMenu : ISelectedMenuItemListener
     {

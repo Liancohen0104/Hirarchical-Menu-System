@@ -1,4 +1,4 @@
-﻿namespace Ex04.Menus.Interfaces
+﻿namespace Menus.Interfaces
 {
     public abstract class MenuItem
     {
@@ -6,14 +6,14 @@
 
         public MenuItem(string i_Title)
         {
-            this.r_Title = i_Title;
+            r_Title = i_Title;
         }
 
         public string Title
         {
             get
             {
-                return this.r_Title;
+                return r_Title;
             }
         }
 

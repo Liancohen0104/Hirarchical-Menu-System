@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-namespace Ex04.Menus.Events
+
+namespace Menus.Interfaces
 {
     public class SubMenuItem : MenuItem
     {
@@ -15,14 +16,14 @@ namespace Ex04.Menus.Events
         {
             get
             {
-                return this.r_SubMenuItemsList;
+                return r_SubMenuItemsList;
             }
         }
 
         public override void Select()
         {
             bool backRequested = false;
-            int  userChoice;
+            int userChoice;
 
             while (!backRequested)
             {
@@ -34,7 +35,7 @@ namespace Ex04.Menus.Events
                 }
 
                 Console.WriteLine("0. Back");
-                userChoice = getValidChoiceFromUser(r_SubMenuItemsList.Count);
+                userChoice = MainMenu.GetValidChoiceFromUser(r_SubMenuItemsList.Count);
                 if (userChoice == 0)
                 {
                     backRequested = true;
@@ -50,29 +51,6 @@ namespace Ex04.Menus.Events
                     r_SubMenuItemsList[userChoice - 1].Select();
                 }
             }
-        }
-
-        private int getValidChoiceFromUser(int i_MaxIndexMenuItem)
-        {
-            int userChoice;
-            bool validInput = false;
-            string input;
-
-            do
-            {
-                Console.Write(">> ");
-                input = Console.ReadLine();
-                validInput = int.TryParse(input, out userChoice)
-                             && userChoice >= 0
-                             && userChoice <= i_MaxIndexMenuItem;
-                if (!validInput)
-                {
-                    Console.WriteLine("Invalid input, please try again");
-                }
-            }
-            while (!validInput);
-
-            return userChoice;
         }
     }
 }
